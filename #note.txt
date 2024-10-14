@@ -1,0 +1,49 @@
+pip install pandas numpy opencv-contrib-python matplotlib seaborn beautifulsoup4 requests scikit-learn tensorflow selenium scikit-image kaggle gdown
+
+conda install -c simpleitk SimpleITK
+
+포스터 이미지 데이터 경로
+G:\내 드라이브\project_poster\x_train
+
+패키지 설치하는데 권한 문제 발생시 우회 방법
+pip install --user easyocr
+
+데이터프레임을 csv 파일로 저장
+csv_filename = 'grouped_data3.csv'
+df.to_csv(csv_filename, index=False)
+
+여러 라이브러리 버전 한번에 확인
+pip freeze
+
+가상환경 파이썬 버전 변경
+conda install python=3.7
+
+csv 파일 불러오기
+import pandas as pd
+df=pd.read_csv('./grouped_data3.csv')
+df
+
+아나콘다 가상환경 이름 변경
+conda create --name (새로운 가상 환경 이름) --clone (기존의 가상 환경 이름)
+
+아나콘다 가상환경 삭제
+conda remove --name [가상환경명] --all
+
+아나콘다 가상환경 생성
+conda create --name prj_poster python=3.11
+
+opencv 고급 버전 설치
+pip install opencv-contrib-python
+
+파일 저장하거나 덮어씌우기
+import os
+output_path = 'img2.jpg'  # 저장할 파일 경로
+# 파일이 존재하는지 확인
+if os.path.exists(output_path):
+    print(f"'{output_path}' 파일이 이미 존재합니다. 덮어씌워집니다.")
+# 이미지 저장
+success = cv2.imwrite(output_path, contrast_image)  # 최종 이미지 저장
+if success:
+    print(f"이미지가 '{output_path}'에 성공적으로 저장되었습니다.")
+else:
+    print("이미지 저장에 실패했습니다.")
