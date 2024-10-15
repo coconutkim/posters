@@ -10,3 +10,7 @@ easyocr
 scikit-image
 pixellib
 pycocotools
+torch
+tqdm
+Pillow
+pycocotools
