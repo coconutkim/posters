@@ -15,7 +15,7 @@
 
 
 
-import easyocr
+import ocr.easyocr as easyocr
 import cv2
 import os
 
